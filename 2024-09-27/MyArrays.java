@@ -9,6 +9,13 @@ public class MyArrays {
     str += "]";
     return str;
   }
+  public static int[] returnCopy(int[] ary) {
+    int[] newAry = int[ary.length];
+    for (int i = 0; i<ary.length; i++) {
+      newAry[i] = ary[i];
+    }
+    return newAry;
+  }
   public static void main(String[] args) {
     System.out.println("aryToString TEST CASES");
     System.out.println("Expected: \"[0, 1, 2, 3]\", actual: " + aryToString(new int[]{0,1,2,3}));
