@@ -16,6 +16,16 @@ public class MyArrays {
     }
     return newAry;
   }
+  public static int[] concatArray(int[]ary1, int[]ary2) {
+    int[] newAry = new int[ary1.length+ary2.length];
+    for (int i = 0; i<ary1.length; i++) {
+      newAry[i] = ary1[i];
+    }
+    for (int i = ary1.length; i<ary1.length+ary2.length; i++) {
+      newAry[i] = ary2[i-ary1.length];
+    }
+    return newAry;
+  }
   public static void main(String[] args) {
     //aryToString
     System.out.println("aryToString TEST CASES");
