@@ -52,7 +52,8 @@ public class MyArrays {
     System.out.println(a==b);
     
     //concatArray
-    //
+    System.out.println("concatArray TEST CASES");
+    //checks if the full array as a string is the same as the two arrays concatenated and then turned into a string
     System.out.println("Expected: [0, 1, 2, 3], actual: " + aryToString(concatArray(new int[]{0,1}, new int[]{2,3})));
     System.out.println("Expected: [82], actual: " + aryToString(concatArray(new int[0], new int[]{82})));
     System.out.println("Expected: [], actual: " + aryToString(concatArray(new int[0], new int[0])));
