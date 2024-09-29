@@ -17,14 +17,20 @@ public class MyArrays {
     return newAry;
   }
   public static void main(String[] args) {
+    //aryToString
     System.out.println("aryToString TEST CASES");
-    System.out.println("Expected: \"[0, 1, 2, 3]\", actual: " + aryToString(new int[]{0,1,2,3}));
-    System.out.println("Expected: \"[]\", actual: " + aryToString(new int[0]));
-    System.out.println("Expected: \"[463]\", actual: " + aryToString(new int[]{463}));
-    System.out.println("Expected: \"[-8, 20, -103, 4, 6983]\", actual: " + aryToString(new int[]{-8,20,-103,4,6983}));
+    System.out.println("Expected: [0, 1, 2, 3], actual: " + aryToString(new int[]{0,1,2,3}));
+    System.out.println("Expected: [], actual: " + aryToString(new int[0]));
+    System.out.println("Expected: [463], actual: " + aryToString(new int[]{463}));
+    System.out.println("Expected: [-8, 20, -103, 4, 6983], actual: " + aryToString(new int[]{-8,20,-103,4,6983}));
+    
+    //returnCopy
     System.out.println("returnCopy TEST CASES");
+    //creates an initial array, then creates a variable for the copy
     int[] a = new int[]{0,1,2,3}, b = returnCopy(a);
+    //test if the values are the same by checking if strings are the same
     System.out.print("Expected true: " + aryToString(a).equals(aryToString(b)) + " Expected false: ");
+    //test if the actual arrays are the same
     System.out.println(a==b);
     a = new int[0];
     b = returnCopy(a);
@@ -34,5 +40,12 @@ public class MyArrays {
     b = returnCopy(a);
     System.out.print("Expected true: " + aryToString(a).equals(aryToString(b)) + " Expected false: ");
     System.out.println(a==b);
+    
+    //concatArray
+    //
+    System.out.println("Expected: [0, 1, 2, 3], actual: " + aryToString(concatArray(new int[]{0,1}, new int[]{2,3})));
+    System.out.println("Expected: [82], actual: " + aryToString(concatArray(new int[0], new int[]{82})));
+    System.out.println("Expected: [], actual: " + aryToString(concatArray(new int[0], new int[0])));
+    System.out.println("Expected: [-8, 20, -103, 4, 6983], actual: " + aryToString(concatArray(new int[]{-8,20}, new int[]{-103,4,6983})));
   }
 }
