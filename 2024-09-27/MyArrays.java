@@ -3,7 +3,7 @@ public class MyArrays {
     String str = "[";
     for (int i = 0; i < nums.length; i++) {
       str += nums[i];
-      if (i < nums.length)
+      if (i < nums.length-1)
         str += ", ";
     }
     str += "]";
