@@ -15,5 +15,14 @@ public class MyArrays {
     System.out.println("Expected: \"[]\", actual: " + aryToString(new int[0]));
     System.out.println("Expected: \"[463]\", actual: " + aryToString(new int[]{463}));
     System.out.println("Expected: \"[-8, 20, -103, 4, 6983]\", actual: " + aryToString(new int[]{-8,20,-103,4,6983}));
+    System.out.println("returnCopy TEST CASES");
+    int[] a = new int[]{0,1,2,3}, b = returnCopy(a);
+    System.out.println("Expected: " + a + ", actual: " + b + ", same array?: " + a==b);
+    int[] a = new int[0], b = returnCopy(a);
+    System.out.println("Expected: " + a + ", actual: " + b + ", same array?: " + a==b);
+    int[] a = new int[]{463}, b = returnCopy(a);
+    System.out.println("Expected: " + a + ", actual: " + b + ", same array?: " + a==b);
+    int[] a = new int[]{-8,20,-103,4,6983}, b = returnCopy(a);
+    System.out.println("Expected: " + a + ", actual: " + b + ", same array?: " + a==b);
   }
 }
