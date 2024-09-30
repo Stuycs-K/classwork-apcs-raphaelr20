@@ -59,8 +59,15 @@ public class ArrayMethods{
       * e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
       */
     public static int[][] swapRC(int[][]nums){
-      return new int[1][1];
+        int[][] newNums = new int[nums[0].length][nums.length];
+        for (int i = 0; i < nums[0].length; i++) {
+            for (int x = 0; x < nums.length; x++) {
+                newNums[i][x] = nums[x][i];
+            }
+        }
+        return newNums;
     }
+    
     public static void main (String [] args){
         //arrToString test cases
         System.out.println("arrToString TEST CASES");
