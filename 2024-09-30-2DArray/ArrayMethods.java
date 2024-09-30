@@ -82,7 +82,7 @@ public class ArrayMethods{
         System.out.println("Expected: 0, actual: " + arr2DSum(new int[0][0]));
         System.out.println("Expected: 0, actual: " + arr2DSum(new int[8][0]));
         //swapRC test cases
-        System.out.println("swapRC TEST CASES")
+        System.out.println("swapRC TEST CASES");
         System.out.println("Expected: " + arrToString(new int[][]{{23}, {51}, {12}, {-19}}) + ", actual: " + arrToString(swapRC(new int[][]{{23, 51, 12, -19}})));
         System.out.println("Expected: " + arrToString(new int[][]{{1, 5, 6}, {2, 81, -3}, {41, 22, 763}}) + ", actual: " + arrToString(swapRC(new int[][]{{1, 2, 41}, {5, 81, 22}, {6, -3, 763}})));
         System.out.println("Expected: " + arrToString(new int[][]{{23, 51, 12, -19}}) + ", actual: " + arrToString(swapRC(new int[][]{{23}, {51}, {12}, {-19}})));
