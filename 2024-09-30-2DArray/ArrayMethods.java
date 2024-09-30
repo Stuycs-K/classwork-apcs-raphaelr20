@@ -34,10 +34,22 @@ public class ArrayMethods{
 public static String arrToString(int[][]ary){
   //this should use arrToString(int[])
   String str = "[";
+  String newString;
   for (int i = 0; i < ary.length; i++){
-
+    newString = "[";
+    for (int x = 0; i < ary[i].length; x ++){
+      newString += ary[i][x];
+      if (x < ary[i].length - 1){
+        newString += ", ";
+      }
+    }
+    newString += "]";
+    if (i < ary.length-1) {
+      str += ", ";
+    }
   }
-  return "";
+  str += "]"
+  return str;
 }
 
 /*Return the sum of all of the values in the 2D array */
