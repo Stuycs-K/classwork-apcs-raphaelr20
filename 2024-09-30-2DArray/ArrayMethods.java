@@ -45,7 +45,13 @@ public class ArrayMethods{
 
     /*Return the sum of all of the values in the 2D array */
     public static int arr2DSum(int[][]nums){
-      return 0;
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int x = 0; x < nums[i].length; x++) {
+                sum += nums[i][x];
+            }
+        }
+        return sum;
     }
 
     /**Rotate an array by returning a new array with the rows and columns swapped.
