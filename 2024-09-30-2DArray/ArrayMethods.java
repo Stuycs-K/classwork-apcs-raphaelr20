@@ -34,6 +34,7 @@ public class ArrayMethods{
                 }
             }
             newString += "]";
+            str += newString;
             if (i < ary.length-1) {
                 str += ", ";
             }
@@ -44,7 +45,7 @@ public class ArrayMethods{
 
     /*Return the sum of all of the values in the 2D array */
     public static int arr2DSum(int[][]nums){
-      //use a nested loop to solve this
+      return 0;
     }
 
     /**Rotate an array by returning a new array with the rows and columns swapped.
@@ -55,8 +56,17 @@ public class ArrayMethods{
       return new int[1][1];
     }
     public static void main (String [] args){
+        //arrToString test cases
+        System.out.println("arrToString TEST CASES");
         System.out.println("Expected: [[0, 1], [2], []], actual: " + arrToString(new int[][]{{0,1}, {2}, {}}));
-        System.out.println("Expected: [[]], actual: " + arrToString(new int[1][]));
-        System.out.println("Expected: [[82, 63, 2], [21, 0, 4], [920, 612, 21]], actual: " + arrToString(new int[][]{{82, 63, 2}, {21, 0, 4}, {920, 612, 21}}));
+        System.out.println("Expected: [[], [], [], []], actual: " + arrToString(new int[4][0]));
+        System.out.println("Expected: [], actual: " + arrToString(new int[0][0]));
+        System.out.println("Expected: [[82, 63, -2], [21, 0, 4], [920, 612, 21]], actual: " + arrToString(new int[][]{{82, 63, -2}, {21, 0, 4}, {920, 612, 21}}));
+        //arr2DSum test cases
+        System.out.println("arr2DSum TEST CASES");
+        System.out.println("Expected: 18, actual: " + arr2DSum(new int[][]{{3, 21, -9}, {0}, {97, -94}}));
+        System.out.println("Expected: 74, actual: " + arr2DSum(new int[][]{{17, 2}, {24, 7}, {-8, 32}}));
+        System.out.println("Expected: 0, actual: " + arr2DSum(new int[0][0]));
+        System.out.println("Expected: 0, actual: " + arr2DSum(new int[8][0]));
     }
 }
