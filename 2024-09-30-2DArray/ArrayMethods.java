@@ -2,7 +2,7 @@ public class ArrayMethods{
   //1. Write both your names + emails at the top of the document as a comment.
   //Nowar Nizum nnizum60@stuy.edu
   //Raphael Ramot rramot60@stuy.edu
-  
+
   public static String aryToString(int[] nums) {
       String str = "[";
       for (int i = 0; i < nums.length; i++) {
@@ -67,7 +67,17 @@ public class ArrayMethods{
         }
         return newNums;
     }
-    
+
+    public static void replaceNegative(int[][]vals) {
+        for (int i = 0; i<vals.length; i++) {
+            for (int x = 0; x < vals[i].length; x++) {
+                if (vals[i][x] < 0) {
+
+                }
+            }
+        }
+    }
+
     public static void main (String [] args){
         //arrToString test cases
         System.out.println("arrToString TEST CASES");
