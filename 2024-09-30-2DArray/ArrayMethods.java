@@ -94,6 +94,14 @@ public class ArrayMethods{
     public static int[][] copy(int[][] nums){
         return null;//placeholder so it compiles
     }
+    public static boolean testCopy(int[][] nums) {
+        int[][] numsCopy = copy(nums);
+        if (aryToString(nums).equals(aryToString(numsCopy))) {
+            nums[0] = new int[10];
+            return aryToString(nums).equals(aryToString(numsCopy)) == false;
+        }
+        return false;
+    }
     
     public static void main (String [] args){
         //arrToString test cases
@@ -128,5 +136,9 @@ public class ArrayMethods{
         replaceNegative(arr);
         System.out.println(arrToString(arr));
         //copy test cases
+        System.out.println("copy TEST CASES");
+        System.out.println("Expected: true, actual: " + testCopy(new int[][]{{0, 1}, {2, 3}, {4, 5}}));
+        System.out.println("Expected: true, actual: " + testCopy(new int[][]{{0, 1}, {2, 3, 4, 5}}));
+        System.out.println("Expected: true, actual: " + testCopy(new int[1][0]));
     }
 }
