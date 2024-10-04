@@ -95,7 +95,7 @@ public class ArrayMethods{
         int[][] newNums = new int[nums.length][];
         for (int i = 0; i < nums.length; i++) {
             newNums[i] = new int[nums[i].length];
-            for (int x = 0; x < nums[i].length; i++) {
+            for (int x = 0; x < nums[i].length; x++) {
                 newNums[i][x] = nums[i][x];
             }
         }
@@ -103,9 +103,9 @@ public class ArrayMethods{
     }
     public static boolean testCopy(int[][] nums) {
         int[][] numsCopy = copy(nums);
-        if (aryToString(nums).equals(aryToString(numsCopy))) {
+        if (arrToString(nums).equals(arrToString(numsCopy))) {
             nums[0] = new int[10];
-            return aryToString(nums).equals(aryToString(numsCopy)) == false;
+            return arrToString(nums).equals(arrToString(numsCopy)) == false;
         }
         return false;
     }
