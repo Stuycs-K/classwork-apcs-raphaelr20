@@ -1,18 +1,18 @@
 public class ArrayMethods{
-  //1. Write both your names + emails at the top of the document as a comment.
-  //Nowar Nizum nnizum60@stuy.edu
-  //Raphael Ramot rramot60@stuy.edu
+    //1. Write both your names + emails at the top of the document as a comment.
+    //Nowar Nizum nnizum60@stuy.edu
+    //Raphael Ramot rramot60@stuy.edu
   
-  public static String aryToString(int[] nums) {
-      String str = "[";
-      for (int i = 0; i < nums.length; i++) {
-          str += nums[i];
-          if (i < nums.length-1)
-              str += ", ";
-      }
-      str += "]";
-      return str;
-  }
+    public static String aryToString(int[] nums) {
+        String str = "[";
+        for (int i = 0; i < nums.length; i++) {
+            str += nums[i];
+            if (i < nums.length-1)
+                str += ", ";
+        }
+        str += "]";
+        return str;
+    }
     //3. Write arrToString, with a 2D array parameter.
     //Note: Different parameters are allowed with the same function name.
     /**Return a String that represets the 2D array in the format:
@@ -67,6 +67,33 @@ public class ArrayMethods{
         }
         return newNums;
     }
+
+    //3. Modify a given 2D array of integer as follows:
+    //Replace all the negative values:
+    //-When the row number is the same as the column number replace
+    //that negative with the value 1
+    //-All other negatives replace with 0
+    public static void replaceNegative(int[][] vals) {
+        for (int i = 0; i < vals.length; i++) {
+            for (int x = 0; x < vals[0].length; x++) {
+                if (vals[i][x]<0) {
+                    if (i==x)
+                        vals[i][x] = 1;
+                    else
+                        vals[i][x] = 0;
+                }
+            }
+        }
+    }
+
+    //4. Make a copy of the given 2d array.
+    //When testing : make sure that changing the original does NOT change the copy.
+    //DO NOT use any built in methods that "copy" an array.
+    //You SHOULD write a helper method for this.
+    //If you don't see a good way to do that, you should stop and look at prior methods.
+    public static int[][] copy(int[][] nums){
+        return null;//placeholder so it compiles
+    }
     
     public static void main (String [] args){
         //arrToString test cases
@@ -86,5 +113,10 @@ public class ArrayMethods{
         System.out.println("Expected: " + arrToString(new int[][]{{23}, {51}, {12}, {-19}}) + ", actual: " + arrToString(swapRC(new int[][]{{23, 51, 12, -19}})));
         System.out.println("Expected: " + arrToString(new int[][]{{1, 5, 6}, {2, 81, -3}, {41, 22, 763}}) + ", actual: " + arrToString(swapRC(new int[][]{{1, 2, 41}, {5, 81, 22}, {6, -3, 763}})));
         System.out.println("Expected: " + arrToString(new int[][]{{23, 51, 12, -19}}) + ", actual: " + arrToString(swapRC(new int[][]{{23}, {51}, {12}, {-19}})));
+        //replaceNegative test cases
+        System.out.println("replaceNegative TEST CASES");
+        System.out.println("Expected: " + arrToString(new int[][]{{23, 1}, {2}}) + ", actual: " + arrToString(replaceNegative(new int[][]{{23, 1}, {2}})));
+        System.out.println("Expected: " + arrToString(new int[][]{{1, 0}, {0, 1}}) + ", actual: " + arrToString(replaceNegative(new int[][]{{-1, -8}, {0, -32}})));
+        System.out.println("Expected: " + arrToString(new int[][]{{0, 0, 38}}) + ", actual: " + arrToString(replaceNegative(new int[][]{{0, -38, 38}})));
     }
 }
