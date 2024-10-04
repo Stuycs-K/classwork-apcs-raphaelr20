@@ -75,7 +75,7 @@ public class ArrayMethods{
     //-All other negatives replace with 0
     public static void replaceNegative(int[][] vals) {
         for (int i = 0; i < vals.length; i++) {
-            for (int x = 0; x < vals[0].length; x++) {
+            for (int x = 0; x < vals[i].length; x++) {
                 if (vals[i][x]<0) {
                     if (i==x)
                         vals[i][x] = 1;
@@ -115,8 +115,18 @@ public class ArrayMethods{
         System.out.println("Expected: " + arrToString(new int[][]{{23, 51, 12, -19}}) + ", actual: " + arrToString(swapRC(new int[][]{{23}, {51}, {12}, {-19}})));
         //replaceNegative test cases
         System.out.println("replaceNegative TEST CASES");
-        System.out.println("Expected: " + arrToString(new int[][]{{23, 1}, {2}}) + ", actual: " + arrToString(replaceNegative(new int[][]{{23, 1}, {2}})));
-        System.out.println("Expected: " + arrToString(new int[][]{{1, 0}, {0, 1}}) + ", actual: " + arrToString(replaceNegative(new int[][]{{-1, -8}, {0, -32}})));
-        System.out.println("Expected: " + arrToString(new int[][]{{0, 0, 38}}) + ", actual: " + arrToString(replaceNegative(new int[][]{{0, -38, 38}})));
+        int[][] arr = new int[][]{{23, 1}, {2}};
+        System.out.print("Expected: " + arrToString(arr) + ", actual: ");
+        replaceNegative(arr);
+        System.out.println(arrToString(arr));
+        arr = new int[][]{{-1, -8}, {0, -32}};
+        System.out.print("Expected: " + arrToString(new int[][]{{1, 0}, {0, 1}}) + ", actual: ");
+        replaceNegative(arr);
+        System.out.println(arrToString(arr));
+        arr = new int[][]{{0, -38, 38}};
+        System.out.print("Expected: " + arrToString(new int[][]{{0, 0, 38}}) + ", actual: ");
+        replaceNegative(arr);
+        System.out.println(arrToString(arr));
+        //copy test cases
     }
 }
