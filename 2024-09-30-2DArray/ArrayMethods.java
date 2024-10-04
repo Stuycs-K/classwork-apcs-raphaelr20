@@ -92,7 +92,14 @@ public class ArrayMethods{
     //You SHOULD write a helper method for this.
     //If you don't see a good way to do that, you should stop and look at prior methods.
     public static int[][] copy(int[][] nums){
-        return null;//placeholder so it compiles
+        int[][] newNums = new int[nums.length][];
+        for (int i = 0; i < nums.length; i++) {
+            newNums[i] = new int[nums[i].length];
+            for (int x = 0; x < nums[i].length; i++) {
+                newNums[i][x] = nums[i][x];
+            }
+        }
+        return newNums;
     }
     public static boolean testCopy(int[][] nums) {
         int[][] numsCopy = copy(nums);
