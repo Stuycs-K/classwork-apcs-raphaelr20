@@ -9,10 +9,13 @@ public class ArrayDemo{
     System.out.println("Expected: " + Arrays.toString(new int[]{1, 2, 3}) + ", actual: " + arrToString(new int[]{1, 2, 3}));
     System.out.println("Expected: " + Arrays.toString(new int[][]{{82, 0}, {-4}}) + ", actual: " + arrToString(new int[][]{{82, 0}, {-4}}));
     //test cases for countZeros2D
-    System.out.println("countZeros2D");
+    System.out.println("countZeros2D TEST CASES");
     System.out.println("Expected: 0, actual: " + countZeros2D(new int[][]{{1}, {-3}}));
     System.out.println("Expected: 3, actual: " + countZeros2D(new int[][]{{}, {0, 0}, {3, 0, 2}}));
     //test cases for htmlTable
+    System.out.println("htmlTable TEST CASES");
+    System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>, actual: " + htmlTable(new int[][]{{1,2},{3}}));
+    System.out.println("Expected: <table><tr></tr></table>, actual: " + htmlTable(new int[][]{{}}));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -128,6 +131,6 @@ public class ArrayDemo{
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][]nums){
-    
+    String table = 
   }
 }
