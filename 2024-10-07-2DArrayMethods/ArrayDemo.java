@@ -7,7 +7,7 @@ public class ArrayDemo{
     //do not use any other Arrays.method()
     System.out.println("arrToString TEST CASES");
     System.out.println("Expected: " + Arrays.toString(new int[]{1, 2, 3}) + ", actual: " + arrToString(new int[]{1, 2, 3}));
-    System.out.println("Expected: " + Arrays.toString(new int[][]{{82, 0}, {-4}}) + ", actual: " + arrToString(new int[][]{{82, 0}, {-4}}));
+    System.out.println("Expected: " + Arrays.deepToString(new int[][]{{82, 0}, {-4}}) + ", actual: " + arrToString(new int[][]{{82, 0}, {-4}}));
     //test cases for countZeros2D
     System.out.println("countZeros2D TEST CASES");
     System.out.println("Expected: 0, actual: " + countZeros2D(new int[][]{{1}, {-3}}));
@@ -21,9 +21,9 @@ public class ArrayDemo{
   //0. Include your prior methods to help you print a 1D/2D array of ints.
   public static String arrToString(int[]ary){
     String str = "[";
-    for (int i = 0; i < nums.length; i++) {
-        str += nums[i];
-        if (i < nums.length-1)
+    for (int i = 0; i < ary.length; i++) {
+        str += ary[i];
+        if (i < ary.length-1)
             str += ", ";
     }
     str += "]";
@@ -105,11 +105,10 @@ public class ArrayDemo{
   public static int[][] copy(int[][] nums){
     int[][] newNums = new int[nums.length][];
     for (int i = 0; i < nums.length; i++) {
-        newNums += copy(nums[i]);
+        newNums[i] = copy(nums[i]);
         }
-    }
     return newNums;
-  }
+    }
 
   //5. Rotate an array by returning a new array with the rows and columns swapped.
   //   You may assume the array is rectangular and neither rows nor cols is 0.
