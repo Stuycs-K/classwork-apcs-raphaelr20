@@ -7,12 +7,12 @@ public class Point{
 
   //Initialize this Point to have the same values as the other Point.
   public Point(Point other){
-    //COMPLETE THIS SECOND
-    //Then write test cases.
+    this.x=other.x;
+    this.y=other.y;
   }
 
   //Initialize this Point to have the provided values
-  public Point(double x, double Y){
+  public Point(double x, double y){
     this.x=x;
     this.y=y;
   }
@@ -27,7 +27,7 @@ public class Point{
   Write this method FOURTH, go to the main and do that one first.
   */
   public double distanceTo(Point other){
-    return 0.0;
+    return Math.sqrt(Math.pow(other.x-this.x,2)+Math.pow(other.y-this.y,2));
   }
 
   /*
@@ -35,7 +35,7 @@ public class Point{
   do not write redundant code.
   */
   public static double distance(Point a, Point b){
-    return 0.0;
+    return Math.sqrt(Math.pow(a.x-b.x,2)+Math.pow(a.y-b.y,2));
   }
 
 
