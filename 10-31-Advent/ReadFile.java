@@ -10,10 +10,17 @@ public class ReadFile {
     try {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
+      // while(input.hasNextLine()) {
+      //   System.out.println(input.nextLine());
+      //   if (input.hasNextLine())
+      //     input.nextLine();
+      // }
       while(input.hasNextLine()) {
-        System.out.println(input.nextLine());
-        if (input.hasNextLine())
-          input.nextLine();
+        String line = input.nextLine();
+        for (int i = 0; i < line.length(); i++) {
+          if (line.charAt(i)=='{')
+            System.out.println(line);
+        }
       }
       input.close();//releases the file from your program
 
