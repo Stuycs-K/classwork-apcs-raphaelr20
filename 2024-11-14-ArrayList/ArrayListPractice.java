@@ -15,5 +15,9 @@ public class ArrayListPractice {
     public static void replaceEmpty( ArrayList<String> original){
         //Modify the ArrayList such that it has all of the empty strings are
         //replaced with the word "Empty".
+        for (int i = 0; i<original.size(); i++) {
+            if (original.get(i).equals(""))
+                original.set(i, "Empty");
+        }
     }
 }
