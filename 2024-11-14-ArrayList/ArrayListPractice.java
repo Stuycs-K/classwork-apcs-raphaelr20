@@ -4,7 +4,7 @@ public class ArrayListPractice {
     public static ArrayList<String> createRandomArray(int size) {
         ArrayList<String> arr = new ArrayList<String>(size);
         for (int i = 0; i<size; i++) {
-            int value = Math.random()*10;
+            int value = (int)(Math.random()*10);
             if (value == 0)
                 arr.add("");
             else
