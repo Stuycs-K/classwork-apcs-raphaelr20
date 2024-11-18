@@ -11,7 +11,7 @@ public class TriangleTester{
         File file=new File (filename);
         Scanner input = new Scanner(file);
         int count=0;
-        while(input.hasNextLine()){
+        while(input.hasNextLine() && input.hasNextInt()){
             if(isTriangle(input.nextInt(),input.nextInt(),input.nextInt())){
                 count++;
             }
@@ -28,7 +28,7 @@ public class TriangleTester{
         File file=new File (filename);
         Scanner input = new Scanner(file);
         int count=0;
-        while(input.hasNextLine()) {
+        while(input.hasNextLine() && input.hasNextInt()) {
             int[] triangle0 = new int[3];
             int[] triangle1 = new int[3];
             int[] triangle2 = new int[3];
