@@ -27,6 +27,7 @@ class Main {
       // System.out.println(sum);
 
       // System.out.println(TriangleTester.countTrianglesA("inputTri.txt"));
-      System.out.println(TriangleTester.countTrianglesB("inputTri.txt"));
+      // System.out.println(TriangleTester.countTrianglesB("inputTri.txt"));
+      System.out.println(TriangleTester.countTrianglesA("adventInput.txt"));
     }
   }
