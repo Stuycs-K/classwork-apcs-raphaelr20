@@ -9,6 +9,7 @@ public class Day2 {
       for (int i = 0; input.hasNextLine(); i++) {
         moves[i] = input.nextLine().split("");
       }
+      input.close();
       return moves;
     } catch (FileNotFoundException ex) {
       System.out.println("File not found");
@@ -38,10 +39,18 @@ public class Day2 {
     int place = 5;
     for (int i = 0; i<moves.length; i++) {
       for (int x = 0; x<moves[i].length; x++) {
-        if (moves[i][x].equals("U") && place!=1 && place!=2 && place!=4 && place!=5 && place!=9)
-          place-=4;
-        else if (moves[i][x].equals("D") && place!=5 && place!=9 && place!=10 && place!=12 && place!=13)
-          place+=4;
+        if (moves[i][x].equals("U") && place!=1 && place!=2 && place!=4 && place!=5 && place!=9) {
+          if (place==3 || place==13)
+            place-=2;
+          else
+            place-=4;
+        }
+        else if (moves[i][x].equals("D") && place!=5 && place!=9 && place!=10 && place!=12 && place!=13) {
+          if (place==11 || place==1)
+            place+=2;
+          else
+            place+=4;
+        }
         else if (moves[i][x].equals("L") && place!=1 && place!=2 && place!=5 && place!=10 && place!=13)
           place-=1;
         else if (moves[i][x].equals("R") && place!=1 && place!=4 && place!=9 && place!=12 && place!=13)
