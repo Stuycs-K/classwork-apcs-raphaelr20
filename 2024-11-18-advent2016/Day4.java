@@ -20,6 +20,14 @@ public class Day4 {
     int sum = 0;
     for (int i = 0; i<rooms.size(); i++) {
         String room = rooms.get(i);
+        String checksum = room.substring(room.length()-6, room.length()-1);
+        int ID = Integer.parseInt(room.substring(room.length()-10,room.length()-7));
+        ArrayList<String> letters = new ArrayList<String>();
+        for (int x = 0; x < room.length()-11; x++) {
+            if (room.charAt(i)!='-') {
+                letters.add(room.substring(i,i+1));
+            }
+        }
         
     }
     
