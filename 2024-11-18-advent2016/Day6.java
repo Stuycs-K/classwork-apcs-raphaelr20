@@ -35,8 +35,27 @@ public class Day6 {
         }
         return code;
     }
+    public static String corrector2(ArrayList<String> messages) {
+        int[][] counts = new int[8][26];
+        for (int i = 0; i<messages.size(); i++) {
+            for (int x = 0; x<8; x++) { 
+            counts[x][messages.get(i).charAt(x)-97]++;
+            }
+        }
+        String code = "";
+        for (int i = 0; i<8; i++) {
+            int minAt = 0;
+            for (int x = 1; x<26; x++) {
+                if (counts[i][x]<counts[i][minAt] && counts[i][x]!=0) {
+                    minAt = x;
+                }
+            }
+            code += (char)(minAt + 'a');
+        }
+        return code;
+    }
     public static void main(String[] args) {
         System.out.println(corrector(parse("Day6.txt")));
-        System.out.println(2+'a');
+        System.out.println(corrector2(parse("Day6.txt")));
     }
 }
