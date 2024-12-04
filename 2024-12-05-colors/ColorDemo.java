@@ -8,5 +8,6 @@ public class ColorDemo {
                 System.out.print("\u001b[4"+x+"m.");
             }
         }
+        System.out.print("\u001b[0m");
     }
 }
