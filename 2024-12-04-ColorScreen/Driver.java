@@ -38,11 +38,19 @@ public class Driver {
             System.out.print(nums[i]);
         }
     }
+    public static void extraLine() {
+        Text.go(3,2);
+        Text.color(Text.background(Text.MAGENTA), Text.CYAN);
+        for (int i = 0; i<78; i++) {
+            System.out.print("-");
+        }
+    }
     public static void main(String[] args) {
         System.out.print(Text.CLEAR_SCREEN);
         System.out.print(Text.HIDE_CURSOR);
         placeInts();
         System.out.print(Text.RESET);
+        extraLine();
         createBorder();
         System.out.print(Text.RESET);
         System.out.println();
