@@ -1,4 +1,3 @@
-import java.util.Random;
 public class Wizard extends Adventurer {
     private int special;
     private int maxSpecial;
@@ -23,6 +22,9 @@ public class Wizard extends Adventurer {
     public void setSpecial(int n) {
         if (n>maxSpecial) {
             n = maxSpecial;
+        }
+        else if (n<0) {
+            n = 0;
         }
         special = n;
     }
