@@ -35,38 +35,38 @@ public class Wizard extends Adventurer {
     public String attack(Adventurer other) {
         if (other.getHP()<3) {
             other.setHP(0);
-            return "fire spell - "+other.getName()+" deafeated";
+            return this.getName()+" used a fire spell and deafeated "+other.getName();
         }
         other.applyDamage(2);
-        return "fire spell - damaged enemy "+other.getName()+" 2 HP, "+other.getName()+" has "+other.getHP()+" HP remaining";
+        return this.getName()+" used a fire spell and damaged "+other.getName()+" 2 HP, "+other.getName()+" has "+other.getHP()+" HP remaining";
     }
     public String support(Adventurer other) {
         if (other.getmaxHP()-other.getHP()<4) {
             other.setHP(other.getmaxHP());
-            return "heal spell - ally "+other.getName()+" at max health ("+other.getmaxHP()+" HP)";
+            return this.getName()+" used a heal spell and healed "+other.getName()+" to max health ("+other.getmaxHP()+" HP)";
         }
         other.setHP(other.getHP()+3);
-        return "heal spell - healed ally "+other.getName()+" 3 HP, "+other.getName()+" has "+other.getHP()+" HP";
+        return this.getName()+" used a heal spell and healed "+other.getName()+" 3 HP, "+other.getName()+" has "+other.getHP()+" HP";
     }
 
     public String support() {
         if (this.getmaxHP()-this.getHP()<6) {
             this.setHP(this.getmaxHP());
-            return "heal spell - "+this.getName()+" is at max health ("+this.getmaxHP()+" HP)";
+            return this.getName()+" used a heal spell and is at max health ("+this.getmaxHP()+" HP)";
         }
         this.setHP(this.getHP()+5);
-        return "heal spell - healed self 5 HP to "+this.getHP()+" HP";
+        return this.getName()+" used a heal spell and healed 5 HP to "+this.getHP()+" HP";
     }
     public String specialAttack(Adventurer other) {
         if (this.getSpecial() == 0) {
-            return "I do not have enough "+this.getSpecialName()+" to use special attack";
+            return this.getName()+" does not have enough "+this.getSpecialName()+" to use special attack";
         }
         this.setSpecial(this.getSpecial()-1);
         if (other.getHP()<6) {
             other.setHP(0);
-            return "special spell - "+other.getName()+" deafeated, "+this.getSpecial()+" "+this.getSpecialName()+" left";
+            return this.getName()+" used a special spell and defeated "+other.getName();
         }
         other.applyDamage(5);
-        return "special spell - damaged enemy "+other.getName()+" 5 HP, "+other.getName()+" has "+other.getHP()+" HP remaining";
+        return this.getName()+" used a special spell and damaged "+other.getName()+" 5 HP, "+other.getName()+" has "+other.getHP()+" HP remaining";
     }
 }
