@@ -52,17 +52,18 @@ public class Game {
                 System.out.println(player.specialAttack(computer));
             else if (action.equals("su"))
                 System.out.println(player.support());
-            if (computer.getHP()>0) {
-                int compAction = (int)(Math.random()*4);
-                if (compAction == 0) {
-                    System.out.println(computer.attack(player));
-                }
-                if (compAction == 1) {
-                    System.out.println(computer.specialAttack(player));
-                }
-                if (compAction == 2) {
-                    System.out.println(computer.support());
-                }
+            if (computer.getHP()<=0) {
+                break;
+            }
+            int compAction = (int)(Math.random()*3);
+            if (compAction == 0) {
+                System.out.println(computer.attack(player));
+            }
+            if (compAction == 1) {
+                System.out.println(computer.specialAttack(player));
+            }
+            if (compAction == 2) {
+                System.out.println(computer.support());
             }
         }
         if (player.getHP()<=0)
