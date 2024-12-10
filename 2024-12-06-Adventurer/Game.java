@@ -29,8 +29,8 @@ public class Game {
         }
         
         while (player.getHP()>0) {
-            System.out.println("Player: "+player.getName()+", "+player.getHP()+"/"+player.getmaxHP()+", "+player.getSpecial()+"/"+player.getSpecialMax()+" "+player.getSpecialName());
-            System.out.println("Enemy: "+computer.getName()+", "+computer.getHP()+"/"+computer.getmaxHP()+", "+computer.getSpecial()+"/"+computer.getSpecialMax()+" "+computer.getSpecialName());
+            System.out.println("Player: "+player.getName()+", "+player.getHP()+"/"+player.getmaxHP()+" HP, "+player.getSpecial()+"/"+player.getSpecialMax()+" "+player.getSpecialName());
+            System.out.println("Enemy: "+computer.getName()+", "+computer.getHP()+"/"+computer.getmaxHP()+" HP, "+computer.getSpecial()+"/"+computer.getSpecialMax()+" "+computer.getSpecialName());
             System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
             boolean flag2 = true;
             String action = "";
