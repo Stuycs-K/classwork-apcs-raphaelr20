@@ -5,7 +5,7 @@ public class Fibonacci {
         return fib(n-1)+fib(n-2);
     }
     public static void main(String[] args) {
-        fib(Integer.parseInt(args[0]));
-        // 47 is largest n that takes less than 10 seconds
+        System.out.println(fib(Integer.parseInt(args[0])));
+        // 47 is largest n that takes less than 10 seconds and is also when it overflows
     }
 }
